@@ -72,6 +72,17 @@ function App() {
   <Route path="/migration-concepts" element={<ScrollWrapper><MigrationConcepts /></ScrollWrapper>} />
   <Route path="/reference-articles" element={<ScrollWrapper><RefArticles /></ScrollWrapper>} />
   <Route path="/cloud" element={<ScrollWrapper><Cloud /></ScrollWrapper>} />
+  
+  {/* Interview Questions with nested routes */}
+  <Route path="/interview" element={<ScrollWrapper><InterviewQuestions /></ScrollWrapper>}>
+    <Route path="linux" element={<Linux />} />
+    <Route path="ccid" element={<CCIDIntQsns />} />
+    <Route path="devops" element={<DevOpsIntQsns />} />
+    <Route path="jenkins-interview-qsns" element={<JenkinsIntQsns />} />
+    <Route path="devopscmds" element={<DevOpsCmds />} />
+    <Route path="miscellaneous" element={<Miscellaneous />} />
+    <Route index element={<Linux />} />
+  </Route>
 </Routes>
 
       <Footer />

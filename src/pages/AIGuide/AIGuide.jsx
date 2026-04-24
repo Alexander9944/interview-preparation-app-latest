@@ -59,7 +59,7 @@ const AIGuide = () => {
       <div className="space-y-4">
         {Object.entries(aiTools).map(([category, tools], idx) => (
           <details key={idx} className="border border-gray-300 rounded-md">
-            <summary className="bg-gray-100 cursor-pointer px-4 py-2 font-semibold text-lg">
+            <summary className="bg-gray-100 cursor-pointer px-4 py-2 font-semibold text-xs">
               {category}
             </summary>
             <ul className="list-disc px-6 py-3 space-y-1">

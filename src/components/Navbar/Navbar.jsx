@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import {
     FaCloud, FaCogs, FaBook, FaBrain, FaListAlt, FaAws, FaMicrosoft, FaGoogle,
@@ -15,6 +15,9 @@ const Navbar = () => {
     const [activeSubSubmenu, setActiveSubSubmenu] = useState(null);
     const [mobileDropdown, setMobileDropdown] = useState({});
     const [scrolled, setScrolled] = useState(false);
+    
+    const conceptsTimeoutRef = useRef(null);
+    const devOpsTimeoutRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -37,6 +40,8 @@ const Navbar = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("resize", handleResize);
+            if (conceptsTimeoutRef.current) clearTimeout(conceptsTimeoutRef.current);
+            if (devOpsTimeoutRef.current) clearTimeout(devOpsTimeoutRef.current);
         };
     }, []);
 
@@ -45,6 +50,34 @@ const Navbar = () => {
             ...prev,
             [key]: !prev[key],
         }));
+    };
+
+    const handleConceptsMouseLeave = () => {
+        conceptsTimeoutRef.current = setTimeout(() => {
+            setShowDropdown(false);
+            setActiveSubmenu(null);
+        }, 150);
+    };
+
+    const handleConceptsMouseEnter = () => {
+        if (conceptsTimeoutRef.current) {
+            clearTimeout(conceptsTimeoutRef.current);
+        }
+        setShowDropdown(true);
+    };
+
+    const handleDevOpsMouseLeave = () => {
+        devOpsTimeoutRef.current = setTimeout(() => {
+            setShowDevOpsDropdown(false);
+            setActiveSubSubmenu(null);
+        }, 150);
+    };
+
+    const handleDevOpsMouseEnter = () => {
+        if (devOpsTimeoutRef.current) {
+            clearTimeout(devOpsTimeoutRef.current);
+        }
+        setShowDevOpsDropdown(true);
     };
 
     const navLinkClass = "flex items-center gap-2 px-3 py-2 rounded-lg font-medium text-sm transition-all duration-300 hover:text-primary-600 hover:bg-primary-50/80";
@@ -95,11 +128,8 @@ const Navbar = () => {
                         {/* Technical Concepts Dropdown */}
                         <div
                             className="relative group"
-                            onMouseEnter={() => setShowDropdown(true)}
-                            onMouseLeave={() => {
-                                setShowDropdown(false);
-                                setActiveSubmenu(null);
-                            }}
+                            onMouseEnter={handleConceptsMouseEnter}
+                            onMouseLeave={handleConceptsMouseLeave}
                         >
                             <button className={`${navLinkClass} flex items-center`}>
                                 <FaTools className="w-4 h-4" />
@@ -139,7 +169,7 @@ const Navbar = () => {
                                         </div>
 
                                         {activeSubmenu === "cloud" && (
-                                            <div className="absolute left-full top-0 ml-2 w-48 glass-lg shadow-glass-lg rounded-xl py-2 animate-slide-right">
+                                            <div className="absolute left-full top-0 ml-0 w-48 glass-lg shadow-glass-lg rounded-xl py-2 animate-slide-right">
                                                 <Link to="/aws" className={dropdownItemClass}>
                                                     <FaAws className="w-4 h-4 text-orange-500" />
                                                     <span>AWS</span>
@@ -166,11 +196,8 @@ const Navbar = () => {
                         {/* DevOps Dropdown */}
                         <div
                             className="relative group"
-                            onMouseEnter={() => setShowDevOpsDropdown(true)}
-                            onMouseLeave={() => {
-                                setShowDevOpsDropdown(false);
-                                setActiveSubSubmenu(null);
-                            }}
+                            onMouseEnter={handleDevOpsMouseEnter}
+                            onMouseLeave={handleDevOpsMouseLeave}
                         >
                             <button className={`${navLinkClass} flex items-center`}>
                                 <FaCogs className="w-4 h-4" />
@@ -198,7 +225,7 @@ const Navbar = () => {
                                         </div>
 
                                         {activeSubSubmenu === "containers" && (
-                                            <div className="absolute left-full top-0 ml-2 w-48 glass-lg shadow-glass-lg rounded-xl py-2 animate-slide-right">
+                                            <div className="absolute left-full top-0 ml-0 w-48 glass-lg shadow-glass-lg rounded-xl py-2 animate-slide-right">
                                                 <Link to="/docker" className={dropdownItemClass}>
                                                     <FaDocker className="w-4 h-4 text-blue-500" />
                                                     <span>Docker</span>

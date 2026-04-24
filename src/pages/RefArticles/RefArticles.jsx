@@ -57,17 +57,17 @@ const RefArticles = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6 pt-32">
       <h1 className="text-3xl font-bold text-center mb-8">AI Tools Directory</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {aiTools.map((tool, index) => (
           <a
             key={index}
             href={tool.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white shadow-md rounded-xl p-5 hover:bg-blue-50 transition-transform duration-300 hover:scale-105"
+            className="bg-white shadow-md rounded-xl p-3 hover:bg-blue-50 transition-transform duration-300 hover:scale-105"
           >
-            <p className="text-sm text-gray-500">{tool.category}</p>
-            <h2 className="text-xl font-semibold text-blue-600">{tool.name}</h2>
+            <p className="text-xs text-gray-500">{tool.category}</p>
+            <h2 className="text-sm font-semibold text-blue-600">{tool.name}</h2>
           </a>
         ))}
       </div>
