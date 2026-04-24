@@ -14,6 +14,7 @@ const Navbar = () => {
     const [activeSubmenu, setActiveSubmenu] = useState(null);
     const [activeSubSubmenu, setActiveSubSubmenu] = useState(null);
     const [mobileDropdown, setMobileDropdown] = useState({});
+    const [submenuDirection, setSubmenuDirection] = useState("right");
 
     useEffect(() => {
         const handleResize = () => {
@@ -36,6 +37,16 @@ const Navbar = () => {
             [key]: !prev[key],
         }));
     };
+    const handleSubmenuPosition = (e) => {
+  const rect = e.currentTarget.getBoundingClientRect();
+  const spaceRight = window.innerWidth - rect.right;
+
+  if (spaceRight < 200) {
+    setSubmenuDirection("left");
+  } else {
+    setSubmenuDirection("right");
+  }
+};
 
     return (
         <nav className="bg-[#274467] shadow-md fixed w-full z-50 ">
@@ -80,7 +91,7 @@ const Navbar = () => {
                                         <li className="relative" onMouseEnter={() => setActiveSubmenu("cloud")}>
                                             <span className="flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-[#274467] cursor-pointer transition cursor-pointer"><FaCloud /> Cloud▼</span>
                                             {activeSubmenu === "cloud" && (
-                                                <ul className="absolute top-0 left-full ml-1 w-44 bg-[#274467] shadow-lg rounded-md z-50">
+                                                <ul className="absolute top-0 left-full  w-44 bg-[#274467] shadow-lg rounded-md z-50">
                                                     <li><Link to="/aws" className="flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-[#274467] cursor-pointer transition"><FaAws /> AWS</Link></li>
                                                     <li><Link to="/azure" className="flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-[#274467] cursor-pointer transition"><FaMicrosoft /> Azure</Link></li>
                                                     <li><Link to="/gcp" className="flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-[#274467] cursor-pointer transition"><FaGoogle /> GCP</Link></li>
@@ -110,7 +121,7 @@ const Navbar = () => {
                                         <li className="relative" onMouseEnter={() => setActiveSubSubmenu("containers")} onMouseLeave={() => setActiveSubSubmenu(null)}>
                                             <span className="flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-[#274467] cursor-pointer transition cursor-pointer"><FaLayerGroup /> Containers▼</span>
                                             {activeSubSubmenu === "containers" && (
-                                                <ul className="absolute top-0 left-full ml-1 w-52 bg-[#274467] shadow-lg z-50 rounded-md">
+                                                <ul className="absolute top-0 left-full  w-52 bg-[#274467] shadow-lg z-50 rounded-md">
                                                     <li><Link to="/docker" className="flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-[#274467] cursor-pointer transition"><FaDocker /> Docker</Link></li>
                                                     <li><Link to="/kubernetes" className="flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-[#274467] cursor-pointer transition"><FaProjectDiagram /> Kubernetes</Link></li>
                                                     <li><Link to="/openshift" className="flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-[#274467] cursor-pointer transition"><FaCodeBranch /> OpenShift</Link></li>
