@@ -1,3 +1,49 @@
-html {
-  scroll-behavior: smooth;
+/* Global App Styles */
+
+/* Scrollbar styling */
+body {
+  overflow-x: hidden;
+}
+
+/* Page container with gradient background */
+main {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #dbeafe 100%);
+  background-attachment: fixed;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Link styling */
+a {
+  @apply text-primary-600 hover:text-primary-700 transition-colors;
+}
+
+/* Code blocks */
+code {
+  @apply bg-neutral-100 px-2 py-1 rounded text-sm text-neutral-800;
+}
+
+pre {
+  @apply bg-neutral-900 text-neutral-50 p-4 rounded-lg overflow-x-auto;
+}
+
+/* Table styling */
+table {
+  @apply w-full border-collapse;
+}
+
+th {
+  @apply bg-gradient-to-r from-primary-50 to-secondary-50 px-4 py-3 text-left font-semibold text-neutral-700 border-b-2 border-primary-200;
+}
+
+td {
+  @apply px-4 py-3 border-b border-neutral-200;
+}
+
+tr:hover {
+  @apply bg-neutral-50;
 }

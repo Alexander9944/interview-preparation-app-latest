@@ -44,7 +44,7 @@ const ansibleNotes = [
 
 const Ansible = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10 pt-32">
+    <div className="max-w-[1280px] mx-auto px-4 py-10 pt-32">
       <h1 className="text-4xl font-bold text-center mb-12 text-indigo-800">Ansible</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {ansibleNotes.map((section, index) => (

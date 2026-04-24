@@ -129,7 +129,7 @@ const devOpsQuestions = {
 
 const Miscellaneous = () => {
   return (
-    <div className="p-6 max-w-5xl mx-auto">
+    <div className="p-6 max-w-[1024px] mx-auto">
       <h1 className="text-3xl font-bold text-center mb-6">🛠 DevOps Interview Questions (3-4 Yrs)</h1>
       <div className="space-y-4">
         {Object.entries(devOpsQuestions).map(([category, questions], idx) => (

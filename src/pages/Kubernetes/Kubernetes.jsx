@@ -97,7 +97,7 @@ export default function KubernetesFaq() {
   return (
     <>
     <KubernetesServices />
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="max-w-[896px] mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6 text-center">Kubernetes Interview Prep</h1>
 
       {sections.map((section, index) => (
@@ -124,7 +124,7 @@ export default function KubernetesFaq() {
     <KubernetesScaling />
     <KubernetesCommandsAccordion />
     <KubCertificationsteps />
-    <h3 className="text-3xl font-bold mb-6 text-center max-w-lg">Conclusion </h3>
+    <h3 className="text-3xl font-bold mb-6 text-center max-w-[512px]">Conclusion </h3>
 <p className="text-gray-700 mb-4 p-10">
 In conclusion, Kubernetes Services provide a powerful way to connect to your applications in a reliable and scalable way 🚀. By mastering Services, you can build robust and scalable applications that meet the needs of your business 📈.
 </p>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const CCIDPage = () => {
   return (
-    <div className="px-6 py-10 max-w-5xl mx-auto text-gray-800">
+    <div className="px-6 py-10 max-w-[1024px] mx-auto text-gray-800">
       <h1 className="text-3xl font-bold mb-6 text-indigo-700">CI/CD Interview Questions</h1>
       
       <ol className="list-decimal pl-5 space-y-3 text-lg">

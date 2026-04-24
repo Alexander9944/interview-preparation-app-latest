@@ -2,7 +2,7 @@ import { FaBalanceScale, FaLink, FaSearch, FaRedo, FaLock, FaNetworkWired, FaGlo
 
 export default function KubernetesServices() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 pt-32">
+    <div className="max-w-[1152px] mx-auto px-4 py-10 pt-32">
       <h1 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-8">
         Understanding Kubernetes Services: Connecting Your Applications
       </h1>

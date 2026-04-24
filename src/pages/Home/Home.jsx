@@ -4,18 +4,20 @@ import CloudPlatformGuides from "../../components/CloudPlatformGuides/CloudPlatf
 const Home = () => {
   return (
     <>
-      <div className=" pt-[200px] sm:pt-[150px] md:pt-[180px]  px-4 md:px-8 lg:px-16 bg-[#CED6DD] min-h-screen flex items-center">
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-10 items-center w-full">
+      <div className="pt-[160px] sm:pt-[120px] md:pt-[160px] px-4 md:px-8 lg:px-16 bg-gradient-soft min-h-screen flex items-center">
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-10 items-center w-full max-w-[1280px] mx-auto">
           {/* Left content */}
-          <div className="space-y-6 md:pl-6 lg:pl-10 text-center md:text-left">
-            <p className="text-base sm:text-lg tracking-wide text-[#6AA3C2] font-semibold uppercase">
+          <div className="space-y-6 text-center md:text-left animate-slide-up">
+            <p className="text-sm sm:text-base tracking-widest text-primary-600 font-bold uppercase drop-shadow-sm">
               Cloud & On-Premise Infrastructure Engineer
             </p>
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-[#274467] leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-neutral-900 leading-tight">
               Transforming Ideas into{" "}
-              <span className="text-[#147BD1]">On-Premise & Cloud Solutions.</span>
+              <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                On-Premise & Cloud Solutions
+              </span>
             </h1>
-            <p className="text-gray-800 text-sm sm:text-base lg:text-lg">
+            <p className="text-neutral-600 text-base sm:text-lg lg:text-xl leading-relaxed">
               Specializing in both on-premises & cloud infrastructure and passionate
               about architecting robust, secure, and scalable environments across both
               digital and physical landscapes. Whether building cloud-native apps or
@@ -31,7 +33,7 @@ const Home = () => {
             <img
               src="./Multi-clouds.png"
               alt="Cloud Logos Grid"
-              className="w-4/5 sm:w-3/4 md:w-full max-w-md rounded-lg shadow-lg"
+              className="w-4/5 sm:w-3/4 md:w-full max-w-[448px] rounded-lg shadow-lg"
             />
           </div>
         </div>

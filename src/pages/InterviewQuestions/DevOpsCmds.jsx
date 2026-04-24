@@ -420,7 +420,7 @@ const DevOpsCmds = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 bg-white text-gray-800">
+    <div className="max-w-[1152px] mx-auto px-4 py-10 bg-white text-gray-800">
       <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8">DevOps Commands Cheat Sheet</h1>
       <div className="space-y-6">
         {categories.map((section, index) => (

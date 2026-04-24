@@ -3,7 +3,7 @@ import React from "react";
 const OpenShiftContent = () => {
   return (
     <div className="p-6 bg-gray-50 min-h-screen text-gray-800 pt-32">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-[1024px] mx-auto">
         <h1 className="text-3xl font-bold mb-6 text-red-700">Red Hat OpenShift Overview</h1>
 
         <div className="bg-white shadow-md rounded-2xl p-6 mb-8 space-y-4">

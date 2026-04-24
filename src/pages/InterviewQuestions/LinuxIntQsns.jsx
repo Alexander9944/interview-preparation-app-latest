@@ -108,7 +108,7 @@ const Linux = () => {
   };
 
   return (
-    <div className="bg-white shadow rounded-lg p-4 sm:p-6 max-w-5xl mx-auto">
+    <div className="bg-white shadow rounded-lg p-4 sm:p-6 max-w-[1024px] mx-auto">
       <h2 className="text-2xl font-bold mb-4 text-gray-800 text-center">L2 Linux Interview Questions</h2>
       <p className="mb-6 text-gray-600 text-center">
         Prepare for your next Linux interview with these categorized questions.

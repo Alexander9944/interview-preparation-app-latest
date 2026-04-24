@@ -86,7 +86,7 @@ const tools = [
 
 export default function KubCertificationsteps() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 text-gray-800">
+    <div className="max-w-[1152px] mx-auto px-4 py-10 text-gray-800">
       <h1 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-8">
         Kubernetes Certification Preparation Guide
       </h1>

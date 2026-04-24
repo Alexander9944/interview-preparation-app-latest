@@ -1,13 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
+@config "../tailwind.config.js";
+
+* {
+  @apply transition-colors duration-300;
+}
+
+html {
+  scroll-behavior: smooth;
+  @apply bg-gradient-soft;
+}
 
 body {
-  margin: 0;
-  font-family: 'Patua One', cursive;
-  background-color: #f4f4f4;
+  @apply m-0 font-sans bg-neutral-50 text-neutral-900;
+  background-attachment: fixed;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-bold tracking-tight;
 }
 
 h1 {
-  font-family: 'Patua One', cursive;
-  font-size: 2.5rem;
+  @apply text-4xl md:text-5xl font-display font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-display font-bold text-neutral-900;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl font-display font-bold text-neutral-800;
+}
+
+h4 {
+  @apply text-xl md:text-2xl font-display font-semibold text-neutral-800;
+}
+
+h5 {
+  @apply text-lg md:text-xl font-display font-semibold text-neutral-700;
+}
+
+h6 {
+  @apply text-base md:text-lg font-display font-semibold text-neutral-700;
+}
+
+p {
+  @apply text-base text-neutral-600 leading-relaxed;
+}
+
+/* Smooth scroll behavior */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-500;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-primary-200 text-primary-900;
+}
+
+::-moz-selection {
+  @apply bg-primary-200 text-primary-900;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsAndConditions = () => {
   return (
-    <div className="bg-white text-gray-800 px-6 py-10 max-w-4xl mx-auto pt-40">
+    <div className="bg-white text-gray-800 px-6 py-10 max-w-[896px] mx-auto pt-40">
       <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center">📚 Use of External Sources — Terms and Conditions</h1>
       <p className="text-sm text-gray-600 mb-8 text-center">Last Updated: 25.07.2025</p>
 

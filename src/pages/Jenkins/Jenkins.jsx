@@ -3,7 +3,7 @@ import React from "react";
 const Jenkins = () => {
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-10 pt-32">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-[1024px] mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-red-700 mb-8">
           Jenkins Concepts
         </h1>

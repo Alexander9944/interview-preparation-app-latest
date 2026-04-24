@@ -19,7 +19,7 @@ const concepts = [
 
 const TechnicalConcepts = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 pt-32">
+    <div className="max-w-[1152px] mx-auto px-4 py-10 pt-32">
       <h1 className="text-3xl font-bold mb-8 text-center text-gray-800">
         💻 Technical Concepts
       </h1>

@@ -42,7 +42,7 @@ export default function KubernetesScaling() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="max-w-[1152px] mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold text-center mb-10">
         𝑲𝒖𝒃𝒆𝒓𝒏𝒆𝒕𝒆𝒔 𝑺𝒄𝒂𝒍𝒊𝒏𝒈 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒊𝒆𝒔
       </h1>

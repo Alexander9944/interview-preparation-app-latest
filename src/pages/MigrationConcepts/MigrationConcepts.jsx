@@ -70,7 +70,7 @@ const MigrationConcepts = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-6 pt-32">
+    <div className="max-w-[1024px] mx-auto p-6 pt-32">
       <h2 className="text-3xl font-bold mb-6 text-center">
         On-Prem to AWS Cloud Migration Guide
       </h2>
@@ -79,7 +79,7 @@ const MigrationConcepts = () => {
         <img
           src="migration_concepts.jpg"
           alt=" Migration Concepts"
-          className="rounded-xl shadow-lg w-full max-w-3xl"
+          className="rounded-xl shadow-lg w-full max-w-[768px]"
         />
       </div>
 

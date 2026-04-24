@@ -115,7 +115,7 @@ const JenkinsDevOpsIntQsns = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 bg-white text-gray-900">
+    <div className="max-w-[1152px] mx-auto px-4 py-10 bg-white text-gray-900">
       <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10">
         DevOps & Jenkins Interview Questions
       </h1>
